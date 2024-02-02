@@ -101,6 +101,7 @@ exports.setWeight = async function(req, res) {
 }
 
 exports.getWeight = async function(req, res) {
+    console.log("dd")
     try {
         let w_docs = await weight.find()
         let w_temp_arr = w_docs.map((doc) => {return doc.weight + 'g'})
