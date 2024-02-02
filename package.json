@@ -1,0 +1,26 @@
+{
+  "name": "goldcoin",
+  "version": "1.0.0",
+  "description": "this is for gold coin",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Arbab",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.1",
+    "express": "^4.18.2",
+    "express-validator": "^7.0.1",
+    "jsonwebtoken": "^9.0.2",
+    "moment": "^2.30.1",
+    "mongoose": "^7.0.0",
+    "mongoose-paginate-v2": "^1.7.4",
+    "mongoose-unique-validator": "^4.0.0",
+    "request": "^2.88.2",
+    "swagger-ui-express": "^5.0.0",
+    "validator": "^13.11.0",
+    "web3": "^4.4.0"
+  }
+}
