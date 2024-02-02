@@ -35,10 +35,10 @@ if(!db) {
 * Below lines used to define route for the api services
 */
 app.get('/', (req, res) => res.send('Welcome to Cryptotrades API'))
-app.use('/user', user)
-app.use('/country', country)
-app.use('/product', product)
-app.use('/order', order)
+app.use('/api/user', user)
+app.use('/api/country', country)
+app.use('/api/product', product)
+app.use('/api/order', order)
 
 /*
 * Below lines used to handle invalid api calls
