@@ -26,7 +26,7 @@ var orderSchema = mongoose.Schema({
     email: {
         type: String
     },
-    phone: {
+    full_name: {
         type: String
     },
     country: {
@@ -65,6 +65,10 @@ var orderSchema = mongoose.Schema({
     },
     status: {
         type: String
+    },
+    tracking_number: {
+        type: String,
+        default: ''
     },
     created: {
         type: Date,

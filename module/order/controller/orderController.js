@@ -92,6 +92,26 @@ exports.getOrders = async function(req, res) {
         })
     }
 }
+
+exports.getMyOrders = async function(req, res) {
+    try {
+        let w_orders = await order.find({status: {$ne: 'delivered'}, user: req.decoded.account.toLowerCase()})
+        console.log(req.decoded.account.toLowerCase())
+        console.log(w_orders)
+        res.json({
+            status: true,
+            orders: w_orders
+        })
+    } catch(error) {
+        console.log(error)
+        res.json({
+            status: false,
+            message: "getting data failed",
+            error: error
+        })
+    }
+}
+
 /******************************************************
  *   This is the function check object is empty or not
  *****************************************************/
