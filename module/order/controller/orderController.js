@@ -166,7 +166,10 @@ async function getDepositDetail(chain, txHash) {
                 const decoded = web3.eth.abi.decodeLog(depositEventAbi, log.data, log.topics.slice(1));
                 if (decoded) {
                     let w_bigIntValue = BigInt(decoded.amount)
-                    let w_paidAmount = coins(w_bigIntValue.toString(), 18)
+                    let w_decimal = 18;
+                    if (chain == 1)
+                        w_decimal = 6;
+                    let w_paidAmount = coins(w_bigIntValue.toString(), w_decimal)
                     return w_paidAmount;
                     // console.log(`Deposit Details: Sender: ${log.topics[1]}, Recipient (Contract Address): ${receipt.to}, Amount: ${decoded.amount}, Currency (isUSDT): ${decoded.currency}`);
                 }
